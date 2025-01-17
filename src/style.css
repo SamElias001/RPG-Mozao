@@ -3,9 +3,21 @@
     padding: 0;
 }
 
+/* Aba - Ficha */
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    background-color: rgb(50, 6, 83);
+    height: 10vh;
+    border-bottom: 3px solid black;
+}
+
 main {
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(56, 56, 56);
     height: 965px;
+    padding: 10px;
 }
 
 .personagem-background {
@@ -45,9 +57,129 @@ main {
     font-size: 20px;
 }
 
-.personagem-layEsq && .personagem-layDir {
+.personagem-layEsq .personagem-layDir {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+
+
+/* Aba - Personagens */
+
+.bgPers{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+    background-color: aquamarine;
+    margin:  0 250px;
+}
+
+.imgPers {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    border: 2px solid black;
+    border-radius: 43px;
+    margin: 5px;
+    height: 80px;
+    width: 80px;
+    background-image: url(../src/imgs/rascImg.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.tooltip {
+    visibility: hidden;
+    width: 150px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 5px;
+    border-radius: 5px;
+    position: absolute;
+    top: 110%;
+    left: 95%;
+    transform: translateX(-50%);
+    z-index: 10;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.imgPers:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+.barraDeVida {
+    width: 300px;
+    height: 30px;
+    background-color: #ddd;
+    border: 2px solid #000;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+}
+
+.vida {
+    height: 100%;
+    width: 100%; 
+    background-color: #4caf50; 
+    transition: width 0.3s ease; 
+}
+
+.texto-vida {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: bold;
+    color: white;
+    text-shadow: 1px 1px 2px black;
+}
+
+
+/* Aba - Cartas */
+.titulo h1 {
+    font-size: 40px;
+    margin: 0;
+    font-family: "Playwrite AU SA", serif;
+}
+
+#mainCartas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: first baseline;
+    background-color: rgb(51, 51, 51);
+    height: 130vh;
+    padding: 20px;
+    gap: 15px;
+}
+
+.caixasDeConteudo {
+    border: 5px solid black;
+    border-radius: 10px;
+    background-image:url(https://img.freepik.com/psd-gratuitas/papel-de-pergaminho-enrolado-realista-isolado_23-2151866383.jpg?t=st=1737140818~exp=1737144418~hmac=461145e7212a601582edf04574f1a52d6c51cdf7dc3378e6d3323407ea6d4be9&w=1380);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 130%;
+    padding: 20px;
+    box-shadow: 5px 5px 5px #706F70;
+    width: 1600px;
+}
+
+.texto {
+    text-align: justify;
+    font-size: 18px;
+    color: #333;
+    line-height: 1.8;
+}
+
+.texto p {
+    font-family: "Playwrite AU SA", serif;
+    margin-bottom: 20px;
 }
