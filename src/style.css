@@ -3,7 +3,7 @@
     padding: 0;
 }
 
-/* Aba - Ficha */
+/* Configurações padrão */
 header {
     display: flex;
     flex-direction: row;
@@ -23,7 +23,7 @@ main {
 .personagem-background {
     display: flex;
     flex-direction: row;
-    align-items: first baseline;
+    align-items: flex-start;
     justify-content: space-around;
     color: azure;
     border: 2px solid blue;
@@ -50,7 +50,7 @@ main {
     border: 2px solid white;
     border-radius: 6px;
     margin-bottom: 10px;
-    padding: 3px
+    padding: 3px;
 }
 
 .personagem-layout h2 {
@@ -64,17 +64,15 @@ main {
     justify-content: center;
 }
 
-
-
-/* Aba - Personagens */
-
-.bgPers{
+.bgPers {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 300px;
     background-color: aquamarine;
-    margin:  0 250px;
+    margin: 0 250px;
+    border: 2px solid black;
+    border-radius: 15px;
 }
 
 .imgPers {
@@ -86,7 +84,7 @@ main {
     margin: 5px;
     height: 80px;
     width: 80px;
-    background-image: url(../src/imgs/rascImg.jpg);
+    background-image: url(https://img.freepik.com/vetores-gratis/ilustracao-de-desenho-animado-de-cavaleiro-desenhada-de-mao_52683-118933.jpg?t=st=1737153273~exp=1737156873~hmac=80f10d57047dd669c05a30271e681ac3d0b5ca4088211e3f69dd41602b1bf353&w=1060);
     background-size: cover;
     background-position: center;
 }
@@ -113,6 +111,10 @@ main {
     opacity: 1;
 }
 
+.bgHp {
+    display: flex;
+    flex-direction: coloumn;
+}
 
 .barraDeVida {
     width: 300px;
@@ -126,9 +128,9 @@ main {
 
 .vida {
     height: 100%;
-    width: 100%; 
-    background-color: #4caf50; 
-    transition: width 0.3s ease; 
+    width: 100%;
+    background-color: #4caf50;
+    transition: width 0.3s ease;
 }
 
 .texto-vida {
@@ -141,8 +143,7 @@ main {
     text-shadow: 1px 1px 2px black;
 }
 
-
-/* Aba - Cartas */
+/* Cartas */
 .titulo h1 {
     font-size: 40px;
     margin: 0;
@@ -153,7 +154,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: first baseline;
+    justify-content: flex-start;
     background-color: rgb(51, 51, 51);
     height: 130vh;
     padding: 20px;
@@ -163,13 +164,14 @@ main {
 .caixasDeConteudo {
     border: 5px solid black;
     border-radius: 10px;
-    background-image:url(https://img.freepik.com/psd-gratuitas/papel-de-pergaminho-enrolado-realista-isolado_23-2151866383.jpg?t=st=1737140818~exp=1737144418~hmac=461145e7212a601582edf04574f1a52d6c51cdf7dc3378e6d3323407ea6d4be9&w=1380);
+    background-image: url(https://img.freepik.com/psd-gratuitas/papel-de-pergaminho-enrolado-realista-isolado_23-2151866383.jpg?t=st=1737140818~exp=1737144418~hmac=461145e7212a601582edf04574f1a52d6c51cdf7dc3378e6d3323407ea6d4be9&w=1380);
     background-repeat: no-repeat;
     background-position: center;
     background-size: 130%;
     padding: 20px;
     box-shadow: 5px 5px 5px #706F70;
-    width: 1600px;
+    width: 90%;
+    max-width: 1000px;
 }
 
 .texto {
@@ -183,3 +185,41 @@ main {
     font-family: "Playwrite AU SA", serif;
     margin-bottom: 20px;
 }
+
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+    }
+
+    .personagem-layout {
+        flex-direction: column;
+        height: auto;
+        width: 100%;
+    }
+
+    .caixasDeConteudo {
+        width: 100%;
+        padding: 15px;
+        background-size: cover;
+    }
+
+    .bgPers {
+        margin: 0;
+        height: auto;
+    }
+
+    .imgPers {
+        height: 60px;
+        width: 60px;
+    }
+
+    .titulo h1 {
+        font-size: 30px;
+    }
+
+    .texto {
+        font-size: 16px;
+    }
